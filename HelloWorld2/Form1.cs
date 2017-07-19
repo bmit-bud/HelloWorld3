@@ -29,7 +29,6 @@ namespace HelloWorld2
             Random randomColor = new Random();
             this.label1.ForeColor = Color.FromArgb(randomColor.Next(0, 256),
                 randomColor.Next(0, 256), randomColor.Next(0, 256));
-
         }
 
         private void wow_Click(object sender, EventArgs e)
