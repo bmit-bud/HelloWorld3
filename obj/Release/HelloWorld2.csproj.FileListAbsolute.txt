@@ -1,0 +1,8 @@
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\bin\Release\HelloWorld2.exe.config
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\bin\Release\HelloWorld2.exe
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\bin\Release\HelloWorld2.pdb
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Release\HelloWorld2.Form1.resources
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Release\HelloWorld2.Properties.Resources.resources
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Release\HelloWorld2.csproj.GenerateResource.Cache
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Release\HelloWorld2.exe
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Release\HelloWorld2.pdb
