@@ -14,6 +14,7 @@ namespace HelloWorld2
     {
             bool AutoUpdate = false;
             bool ShowTime = true;
+            int ClickCount = 0;
 
             Timer t = new Timer();
 
