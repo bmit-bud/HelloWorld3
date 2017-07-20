@@ -27,7 +27,7 @@ namespace HelloWorld2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           t.Interval = 1000;
+           t.Interval = 10;
            t.Tick += new EventHandler(this.t_Tick);
            t.Start();
         }
@@ -38,6 +38,8 @@ namespace HelloWorld2
             {
                 this.label1.Text = "Time " + DateTime.Now.ToLongTimeString();
             }
+
+            displayClickCount.Text = ClickCount.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,7 +52,8 @@ namespace HelloWorld2
         {
             Random randomColor = new Random();
             this.label1.ForeColor = Color.FromArgb(randomColor.Next(0, 256),
-                randomColor.Next(0, 256), randomColor.Next(0, 256));
+            randomColor.Next(0, 256), randomColor.Next(0, 256));
+             ClickCount++;
         }
 
         private void wow_Click(object sender, EventArgs e)
@@ -68,6 +71,11 @@ namespace HelloWorld2
         private void button1_Click_1(object sender, EventArgs e)
         {
             AutoUpdate = !AutoUpdate;
+        }
+
+        private void displayClickCount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

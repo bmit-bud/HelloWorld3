@@ -34,6 +34,7 @@
             this.changeColor = new System.Windows.Forms.Button();
             this.wow = new System.Windows.Forms.Button();
             this.toggleAutoUpdate = new System.Windows.Forms.Button();
+            this.displayClickCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -93,6 +94,17 @@
             this.toggleAutoUpdate.UseVisualStyleBackColor = true;
             this.toggleAutoUpdate.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // displayClickCount
+            // 
+            this.displayClickCount.AutoSize = true;
+            this.displayClickCount.BackColor = System.Drawing.Color.Transparent;
+            this.displayClickCount.Location = new System.Drawing.Point(306, 244);
+            this.displayClickCount.Name = "displayClickCount";
+            this.displayClickCount.Size = new System.Drawing.Size(58, 13);
+            this.displayClickCount.TabIndex = 5;
+            this.displayClickCount.Text = "ClickCount";
+            this.displayClickCount.Click += new System.EventHandler(this.displayClickCount_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,6 +112,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(412, 308);
+            this.Controls.Add(this.displayClickCount);
             this.Controls.Add(this.toggleAutoUpdate);
             this.Controls.Add(this.wow);
             this.Controls.Add(this.changeColor);
@@ -113,6 +126,7 @@
             this.Text = "DogeClock";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -122,6 +136,7 @@
         private System.Windows.Forms.Button wow;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button toggleAutoUpdate;
+        private System.Windows.Forms.Label displayClickCount;
     }
 }
 
