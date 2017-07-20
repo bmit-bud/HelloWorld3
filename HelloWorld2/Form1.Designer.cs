@@ -98,9 +98,10 @@
             // 
             this.displayClickCount.AutoSize = true;
             this.displayClickCount.BackColor = System.Drawing.Color.Transparent;
-            this.displayClickCount.Location = new System.Drawing.Point(306, 244);
+            this.displayClickCount.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayClickCount.Location = new System.Drawing.Point(317, 236);
             this.displayClickCount.Name = "displayClickCount";
-            this.displayClickCount.Size = new System.Drawing.Size(58, 13);
+            this.displayClickCount.Size = new System.Drawing.Size(83, 21);
             this.displayClickCount.TabIndex = 5;
             this.displayClickCount.Text = "ClickCount";
             this.displayClickCount.Click += new System.EventHandler(this.displayClickCount_Click);
