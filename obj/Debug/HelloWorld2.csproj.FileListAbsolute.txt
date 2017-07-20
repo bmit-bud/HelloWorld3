@@ -7,3 +7,6 @@ c:\users\daniel.busato\documents\visual studio 2015\Projects\HelloWorld2\HelloWo
 c:\users\daniel.busato\documents\visual studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Debug\HelloWorld2.csproj.GenerateResource.Cache
 c:\users\daniel.busato\documents\visual studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Debug\HelloWorld2.exe
 c:\users\daniel.busato\documents\visual studio 2015\Projects\HelloWorld2\HelloWorld2\obj\Debug\HelloWorld2.pdb
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\DogeClock\bin\Debug\HelloWorld2.exe.config
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\DogeClock\obj\Debug\HelloWorld2.exe
+C:\Users\daniel.busato\Documents\Visual Studio 2015\Projects\DogeClock\obj\Debug\HelloWorld2.pdb

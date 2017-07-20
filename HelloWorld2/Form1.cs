@@ -71,6 +71,7 @@ namespace HelloWorld2
         private void button1_Click_1(object sender, EventArgs e)
         {
             AutoUpdate = !AutoUpdate;
+            ShowTime = true;
         }
 
         private void displayClickCount_Click(object sender, EventArgs e)
