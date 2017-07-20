@@ -12,8 +12,9 @@ namespace HelloWorld2
 {
     public partial class Form1 : Form
     {
-            bool AutoUpdate = false;
-            bool ShowTime = true;
+            bool AutoUpdate = true;
+            bool ShowTime = false;
+            bool AutoUpdateFirstClick = false;
             int ClickCount = 0;
 
             Timer t = new Timer();
@@ -38,8 +39,16 @@ namespace HelloWorld2
             {
                 this.label1.Text = "Time " + DateTime.Now.ToLongTimeString();
             }
+            
+            if (ClickCount < 0)
+            {
+               displayClickCount.Text = "Dude, WTF?!";
 
-            displayClickCount.Text = ClickCount.ToString();
+           }
+            if (ClickCount > 0)
+            {
+                displayClickCount.Text = ClickCount.ToString();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,10 +62,16 @@ namespace HelloWorld2
             Random randomColor = new Random();
             this.label1.ForeColor = Color.FromArgb(randomColor.Next(0, 256),
             randomColor.Next(0, 256), randomColor.Next(0, 256));
+            this.displayClickCount.ForeColor = Color.FromArgb((255 - randomColor.Next(0, 256)),
+            (255 - randomColor.Next(0, 256)), (255 - randomColor.Next(0, 256)));
+           
 
-            Random randomColor2 = new Random();
+            /*
+            Random randomColor2 = new Random(1516648886 + DateTime.Ticks);
             this.displayClickCount.ForeColor = Color.FromArgb(randomColor2.Next(0, 256),
             randomColor2.Next(0, 256), randomColor2.Next(0, 256));
+            */
+
             ClickCount++;
         }
 
@@ -74,11 +89,23 @@ namespace HelloWorld2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AutoUpdate = !AutoUpdate;
             ShowTime = true;
+            if (!AutoUpdateFirstClick)
+            {
+                AutoUpdate = true;
+                AutoUpdateFirstClick = true;
+            }
+            if (AutoUpdate)
+                displayToggle.Text = "on";
+            else displayToggle.Text = "off";
         }
 
         private void displayClickCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

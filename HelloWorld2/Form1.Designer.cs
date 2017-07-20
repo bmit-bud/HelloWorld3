@@ -35,6 +35,7 @@
             this.wow = new System.Windows.Forms.Button();
             this.toggleAutoUpdate = new System.Windows.Forms.Button();
             this.displayClickCount = new System.Windows.Forms.Label();
+            this.displayToggle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -100,17 +101,33 @@
             // 
             // displayClickCount
             // 
-            this.displayClickCount.AutoSize = true;
+            this.displayClickCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.displayClickCount.BackColor = System.Drawing.Color.Transparent;
-            this.displayClickCount.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayClickCount.Location = new System.Drawing.Point(317, 236);
+            this.displayClickCount.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.displayClickCount.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.displayClickCount.Location = new System.Drawing.Point(309, 213);
             this.displayClickCount.Name = "displayClickCount";
-            this.displayClickCount.Size = new System.Drawing.Size(83, 21);
-            this.displayClickCount.TabIndex = 5;
-            this.displayClickCount.Text = "ClickCount";
-            this.displayClickCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.displayClickCount.UseWaitCursor = true;
-            this.displayClickCount.Click += new System.EventHandler(this.displayClickCount_Click);
+            this.displayClickCount.Size = new System.Drawing.Size(93, 44);
+            this.displayClickCount.TabIndex = 6;
+            this.displayClickCount.Text = " ";
+            this.displayClickCount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // displayToggle
+            // 
+            this.displayToggle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.displayToggle.BackColor = System.Drawing.Color.Transparent;
+            this.displayToggle.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.displayToggle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.displayToggle.Location = new System.Drawing.Point(111, 213);
+            this.displayToggle.Name = "displayToggle";
+            this.displayToggle.Size = new System.Drawing.Size(93, 44);
+            this.displayToggle.TabIndex = 7;
+            this.displayToggle.Text = " ";
+            this.displayToggle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Form1
             // 
@@ -119,6 +136,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(412, 308);
+            this.Controls.Add(this.displayToggle);
             this.Controls.Add(this.displayClickCount);
             this.Controls.Add(this.toggleAutoUpdate);
             this.Controls.Add(this.wow);
@@ -133,7 +151,6 @@
             this.Text = "DogeClock";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -144,6 +161,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button toggleAutoUpdate;
         private System.Windows.Forms.Label displayClickCount;
+        private System.Windows.Forms.Label displayToggle;
     }
 }
 
