@@ -16,8 +16,9 @@ namespace HelloWorld2
             bool ShowTime = false;
             bool AutoUpdateFirstClick = false;
             int ClickCount = 0;
+            Random randomColor = new Random();
 
-            Timer t = new Timer();
+        Timer t = new Timer();
 
         public Form1()
         {
@@ -39,15 +40,31 @@ namespace HelloWorld2
             {
                 this.label1.Text = "Time " + DateTime.Now.ToLongTimeString();
             }
-            
+
             if (ClickCount < 0)
             {
-               displayClickCount.Text = "Dude, WTF?!";
+                displayClickCount.Text = "Dude, WTF?!";
 
-           }
+            }
             if (ClickCount > 0)
             {
                 displayClickCount.Text = ClickCount.ToString();
+            }
+
+            if (ShowTime)
+            {
+                if (AutoUpdate)
+                {
+                    displayToggle.Text = "on";
+                }
+                else
+                {
+                    displayToggle.Text = "off";
+                }
+            }
+            else
+            {
+                displayToggle.Text = " ";
             }
         }
 
@@ -55,16 +72,25 @@ namespace HelloWorld2
         {
             this.label1.Text = "Time " + DateTime.Now.ToLongTimeString();
             ShowTime = true;
+            AutoUpdateFirstClick = true;
         }
 
         private void changeColor_Click(object sender, EventArgs e)
         {
-            Random randomColor = new Random();
             this.label1.ForeColor = Color.FromArgb(randomColor.Next(0, 256),
             randomColor.Next(0, 256), randomColor.Next(0, 256));
             this.displayClickCount.ForeColor = Color.FromArgb((255 - randomColor.Next(0, 256)),
             (255 - randomColor.Next(0, 256)), (255 - randomColor.Next(0, 256)));
-           
+            if (displayToggle.Text == "on")
+            {
+                this.displayToggle.ForeColor = Color.FromArgb(randomColor.Next(0, 65),
+            randomColor.Next(128, 256), randomColor.Next(0, 65));
+            }
+            else
+            {
+                this.displayToggle.ForeColor = Color.FromArgb(randomColor.Next(128, 256),
+            randomColor.Next(0, 65), randomColor.Next(0, 65));
+            }
 
             /*
             Random randomColor2 = new Random(1516648886 + DateTime.Ticks);
@@ -79,6 +105,9 @@ namespace HelloWorld2
         {
             this.label1.Text = "wow, such time" ;
             ShowTime = false;
+            AutoUpdate = false;
+            AutoUpdateFirstClick = true;
+
         }
 
         private void autoUpdateTime_CheckedChanged(object sender, EventArgs e)
@@ -90,14 +119,28 @@ namespace HelloWorld2
         private void button1_Click_1(object sender, EventArgs e)
         {
             ShowTime = true;
+
             if (!AutoUpdateFirstClick)
             {
                 AutoUpdate = true;
                 AutoUpdateFirstClick = true;
+                this.displayToggle.ForeColor = Color.FromArgb(randomColor.Next(0, 65),
+randomColor.Next(128, 256), randomColor.Next(0, 65));
             }
-            if (AutoUpdate)
-                displayToggle.Text = "on";
-            else displayToggle.Text = "off";
+            else
+            {
+                AutoUpdate = !AutoUpdate;
+                if (AutoUpdate)
+                {
+                    this.displayToggle.ForeColor = Color.FromArgb(randomColor.Next(0, 65),
+                randomColor.Next(128, 256), randomColor.Next(0, 65));
+                }
+                else
+                {
+                    this.displayToggle.ForeColor = Color.FromArgb(randomColor.Next(128, 256),
+                randomColor.Next(0, 65), randomColor.Next(0, 65));
+                }
+            }
         }
 
         private void displayClickCount_Click(object sender, EventArgs e)
