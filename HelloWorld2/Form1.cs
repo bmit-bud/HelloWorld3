@@ -53,7 +53,11 @@ namespace HelloWorld2
             Random randomColor = new Random();
             this.label1.ForeColor = Color.FromArgb(randomColor.Next(0, 256),
             randomColor.Next(0, 256), randomColor.Next(0, 256));
-             ClickCount++;
+
+            Random randomColor2 = new Random();
+            this.displayClickCount.ForeColor = Color.FromArgb(randomColor2.Next(0, 256),
+            randomColor2.Next(0, 256), randomColor2.Next(0, 256));
+            ClickCount++;
         }
 
         private void wow_Click(object sender, EventArgs e)

@@ -54,6 +54,7 @@
             // changeText
             // 
             this.changeText.BackColor = System.Drawing.Color.Transparent;
+            this.changeText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.changeText.ForeColor = System.Drawing.SystemColors.ControlText;
             this.changeText.Location = new System.Drawing.Point(12, 260);
             this.changeText.Name = "changeText";
@@ -65,6 +66,7 @@
             // 
             // changeColor
             // 
+            this.changeColor.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.changeColor.Location = new System.Drawing.Point(309, 260);
             this.changeColor.Name = "changeColor";
             this.changeColor.Size = new System.Drawing.Size(93, 36);
@@ -76,6 +78,7 @@
             // wow
             // 
             this.wow.BackColor = System.Drawing.Color.Transparent;
+            this.wow.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.wow.Location = new System.Drawing.Point(210, 260);
             this.wow.Name = "wow";
             this.wow.Size = new System.Drawing.Size(93, 36);
@@ -86,6 +89,7 @@
             // 
             // toggleAutoUpdate
             // 
+            this.toggleAutoUpdate.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.toggleAutoUpdate.Location = new System.Drawing.Point(111, 260);
             this.toggleAutoUpdate.Name = "toggleAutoUpdate";
             this.toggleAutoUpdate.Size = new System.Drawing.Size(93, 36);
@@ -104,6 +108,8 @@
             this.displayClickCount.Size = new System.Drawing.Size(83, 21);
             this.displayClickCount.TabIndex = 5;
             this.displayClickCount.Text = "ClickCount";
+            this.displayClickCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.displayClickCount.UseWaitCursor = true;
             this.displayClickCount.Click += new System.EventHandler(this.displayClickCount_Click);
             // 
             // Form1
